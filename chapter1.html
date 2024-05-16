@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shell's Lore | Ch01</title>
+    <style>
+        body {
+            background: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            font-family: Calibri;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            overflow-y: hidden;
+        }
+        a {
+            font-size: 30px;
+            -webkit-text-stroke: 2px rgb(0, 0, 0);
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            transition: color 0.7s;
+            transition: all 0.4s;
+        }        
+        a:hover {
+            color: #ffd825;
+            font-size: 40px;
+            -webkit-text-stroke: 2px #ffd825;
+        }
+        .imgMain {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 128px;
+            margin-top: auto;
+        }
+        #comic-panel {
+            width: 80%;
+            height: 500px;
+            margin: 70px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #comic-panel img {
+            max-width: 150%;
+            max-height: 150%;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+            border:black solid 7px;
+        }
+        .nav-button {
+            margin: 75px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #ffffff;
+            color: #000000;
+            border: black solid 3px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+            transition: all 0.3s;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .nav-button:hover {
+            background-color: #ffd825;
+            font-size: 20px
+        }
+    </style>
+</head>
+<body>
+    <a href="home.html">H o m e</a>
+    <img src="SL_LOGO.png" width="48" height="48" class="imgMain">
+    <div id="comic-panel"><img src="panel1.png" alt="Comic Panel"></div>
+    <button class="nav-button" onclick="prevPage()">Previous</button>
+    <button class="nav-button" onclick="nextPage()">Next</button>
+
+    <script>
+        const panels = [
+            'SL_Poster_new.png', 'Shell Lore Comic Start.png', 'Shell Lore Comic Start 2.png', 'Shell Lore Comic Start 4 before 3.png', 'Shell Lore Comic Start 5.png', 'Shell Lore Comic Start 3.png', 
+            'Shell Lore Comic 1.png', 'Shell Lore Comic 2.png', 'Shell Lore Comic 4.png', 'Shell Lore Comic 5.png', 'Shell Lore Comic 6.png', 
+            'Shell Lore Comic 7.png', 'Shell Lore Comic 8.png', 'Shell Lore Comic 9.png', 'Shell Lore Comic 10.png', 'Shell Lore Comic 11.png', 'Shell Lore Comic 12.png', 
+            'Shell Lore Comic 13.png', 'Shell Lore Comic 14.png', 'Shell Lore Comic 15.png', 'Shell Lore Comic 16.png', 'Shell Lore Comic 17.png',
+            'Shell Lore Comic 19.png', 'Shell Lore Comic 20.png', 'Shell Lore Comic 21.png', 'Shell Lore Comic 22.png'
+        ];
+
+        let currentIndex = 0;
+
+        function showPanel(index) {
+            const comicPanel = document.getElementById('comic-panel').firstElementChild;
+            comicPanel.src = panels[index];
+            comicPanel.alt = `Comic Panel ${index + 1}`;
+        }
+
+        function nextPage() {
+            if (currentIndex < panels.length - 1) {
+                currentIndex++;
+                showPanel(currentIndex);
+            }
+        }
+
+        function prevPage() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                showPanel(currentIndex);
+            }
+        }
+
+        // Initialize the first panel
+        showPanel(currentIndex);
+    </script>
+</body>
+</html>
