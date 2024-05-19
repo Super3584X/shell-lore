@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Shell's Lore | Ch01</title>
+    <title>Shell's Lore | Ch02</title>
     <style>
         
         body {
@@ -38,7 +38,7 @@
             font-size: 40px;
             -webkit-text-stroke: 2px #ffd825;
         }
-        
+
         .chapter {
             border-top: 1px white solid;
             margin-bottom: 20px;
@@ -101,18 +101,14 @@
     
     <script>
         const panels = [
-            'SL_Poster_new.png', 'Shell Lore Comic Start.png', 'Shell Lore Comic Start 2.png', 'Shell Lore Comic Start 4 before 3.png', 'Shell Lore Comic Start 5.png', 'Shell Lore Comic Start 3.png', 
-            'Shell Lore Comic 1.png', 'Shell Lore Comic 2.png', 'Shell Lore Comic 4.png', 'Shell Lore Comic 5.png', 'Shell Lore Comic 6.png', 
-            'Shell Lore Comic 7.png', 'Shell Lore Comic 8.png', 'Shell Lore Comic 9.png', 'Shell Lore Comic 10.png', 'Shell Lore Comic 11.png', 'Shell Lore Comic 12.png', 
-            'Shell Lore Comic 13.png', 'Shell Lore Comic 14.png', 'Shell Lore Comic 15.png', 'Shell Lore Comic 16.png', 'Shell Lore Comic 17.png',
-            'Shell Lore Comic 19.png', 'Shell Lore Comic 20.png', 'Shell Lore Comic 21.png', 'Shell Lore Comic 22.png'
+            'SL_Poster_new.png', '01.png', '02.png', '03.png', '04.png', '05.png', '06.png', '07.png', '08.png', '09.png', '10.png', '11.png', '12.png', '13.png', '14.png', '15.png'
         ];
 
         let currentIndex = 0;
 
         function showPanel(index) {
             const comicPanel = document.getElementById('comic-panel');
-            comicPanel.src = 'Chapter 1/' + panels[index];
+            comicPanel.src = 'Chapter 2/' + panels[index];
             comicPanel.alt = `Comic Panel ${index + 1}`;
         }
 
