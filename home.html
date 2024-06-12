@@ -12,35 +12,51 @@
             overflow-x: hidden;
             overflow-y: hidden;
         }
-        .imgMain {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
+		
+		nav ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			background-color: #f5c242;
+			height: 125px;
+		}
+		
+		nav ul li {
+		    display: inline;
+		}
+		
+		nav ul li a {
+		    display: inline-block;
+		}
+		
+		nav ul li img {
+		    display: inline-block;
+			margin: -20px 50px;
+		}
+		
         a {
-        font-size: 120px;
-        text-align : center;
-        text-decoration: none;
-        transition: all 0.4s;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: rgb(255, 255, 255);
-    margin-left: auto;
-    margin-right: auto;
-    margin: 110px;
-    line-height:300px;
-    }        
-    a:hover {
+            font-size: 60px;
+            text-align : center;
+            text-decoration: none;
+            transition: all 0.4s;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: rgb(255, 255, 255);
+            margin: 30px 50px;
+        }  
+		
+        a:hover {
             color: #ffd825;
-            font-size: 140px;
-    }
+        }
     
     </style>
 
 </head>
 <body>
-    <img src="Resources/shell_lore.png" width="282.75" height="117.25" class="imgMain">
-    <h1 align="margin-bottom"></h1>
-    <a href="chapter1.html">Story</a>
-    
-
+    <nav>
+	    <ul>
+		    <li><img src="Resources/shell_lore.png" width="200"></li>
+		    <li><a href="home.html">Home</a></li>
+			<li><a href="chapter1.html">Story</a></li>
+		</ul>
+	</nav>
 </html>
