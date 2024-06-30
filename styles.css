@@ -1,0 +1,150 @@
+@font-face {
+    font-family: 'JosefinSans';
+    src: url('Resources/JosefinSans.ttf');
+    font-weight: normal;
+}
+
+body {
+    background: #303339;
+    font-family: JosefinSans;
+    text-align: center;
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: "sidebar content";
+    grid-template-columns: 1fr 10fr;
+    overflow: hidden;
+}
+
+aside {
+    background-color: #383b41;
+    min-width: 300px;
+    grid-area: sidebar;
+}
+
+a {
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: color 0.7s;
+    transition: all 0.4s;
+    z-index: 2;
+    padding-top: 20px;
+}        
+
+a:hover {
+    color: #ffd825;
+    font-size: 40px;
+    -webkit-text-stroke: 2px #ffd825;
+}
+
+.chapter {
+    border-top: 1px white solid;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.chapter:first-of-type {
+    margin-top: 30px
+}
+
+.imgMain {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.imgMain:hover {
+    outline: 4px solid #ffd825;
+    border-radius: 50%;
+}
+
+main {
+    grid-area: content;
+}
+
+#comic {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+#comic-panel {
+    height: 100vh;
+    z-index: 1;
+}
+
+.click-region {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    opacity: 0%;
+    transition: opacity 0.1s;
+
+}
+
+.nav-button {
+    width: 100px;
+    position: absolute;
+    z-index: 0
+}
+
+#nav-button-left {
+    left: 300px;
+    transition: left 0.2s;
+}
+
+#nav-button-right {
+    right: 300px;
+    transition: right 0.2s;
+}
+
+.click-region:hover {
+    opacity: 100%;
+
+    #nav-button-left {
+        left: 100px;
+    }
+
+    #nav-button-right {
+        right: 100px;
+    }
+}
+
+#click-region-right {
+    right: 0;
+    justify-content: center;
+}
+
+#click-region-left {
+    left: 0;
+    justify-content: center;
+}
+
+.unselectable {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+@media screen and (max-width: 900px) {
+    body {
+        grid-template-areas: 
+        "sidebar"
+        "content"
+        ;
+        grid-template-columns: auto;
+        overflow: auto;
+    }
+
+    .click-region:hover {
+        opacity: 0%;
+    }
+
+    aside {
+        min-width: 100%;
+    }
+}

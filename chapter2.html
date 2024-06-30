@@ -1,103 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Shell's Lore | Ch02</title>
-    <style>
-        
-        body {
-            background: #303339;
-            color: rgb(0, 0, 0);
-            font-family: Calibri;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-        #sidebar {
-            background-color: #383b41;
-            height: 100%;
-            width: 200px;
-            position: absolute;
-        }    
-        #ghost {
-            width: 200px;
-            height: 100%;
-        }
-        
-        a {
-            font-size: 30px;
-            /*-webkit-text-stroke: 2px rgb(255, 255, 255);*/
-            color: rgb(255, 255, 255);
-            text-decoration: none;
-            transition: color 0.7s;
-            transition: all 0.4s;
-            z-index: 2;
-        }        
-        a:hover {
-            color: #ffd825;
-            font-size: 40px;
-            -webkit-text-stroke: 2px #ffd825;
-        }
-
-        .chapter {
-            border-top: 1px white solid;
-            margin-bottom: 20px;
-            display: block;
-        }
-
-        .chapter:first-of-type {
-            margin-top: 30px
-        }
-
-        .imgMain {
-            display: block;
-            margin: auto
-        }
-
-        #flex-container {
-            width: 100%;
-        }
-
-        #comic {
-            display: flex;
-            justify-content: center;
-        }
-        #comic-panel {
-            border:black solid 7px;
-            max-height: 700px;
-        }
-        .nav-button {
-            background: none;
-            border: none;
-            width: 100%;
-            font-size: 60px;
-            color: white;
-            opacity: 0%;
-            transition: opacity 0.7s;
-        }
-
-        .nav-button:hover {
-            opacity: 100%;
-        }
-    </style>
+    <title>Shell's Lore | Ch01</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <div id="ghost"></div>
-    <div id="sidebar">
-        <a href="home.html">H o m e</a>
-        <img src="Resources/SL_LOGO.png" width="48" height="48" class="imgMain">
+    <aside>
+        <a href="home.html"><img src="Resources/SL_LOGO.png" width="48" height="48" class="imgMain"></a>
         <div id="chapter-nav">
             <a class="chapter" href="chapter1.html">Chapter 1</a>
             <a class="chapter" href="chapter2.html">Chapter 2</a>
         </div>
+    </aside>
+    <main>
+    <div id="comic" class="unselectable">
+        <div id="click-region-left" class="click-region"><img src="Resources/Arrow.png" id="nav-button-left" class="nav-button" style="transform: scaleX(-1);"></div>
+        <img id="comic-panel" src="" alt="Comic Panel" loading="eager">
+        <div id="click-region-right" class="click-region"><img src="Resources/Arrow.png" id="nav-button-right" class="nav-button"></div>
     </div>
-    <div id="flex-container">
-        <div id="comic">
-            <button class="nav-button" onclick="prevPage()"> < Previous</button>
-            <img id="comic-panel" src="" alt="Comic Panel">
-            <button class="nav-button" onclick="nextPage()">Next > </button>
-        </div>
-    </div>
+    </main>
+
+    <script src="ch2.js"></script> 
+</body>
+</html>
+
     
     <script>
         const panels = [
